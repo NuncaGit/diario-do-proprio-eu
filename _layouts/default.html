@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | {{ site.title }}</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/sidebar.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/mini_posts.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/post_destaque.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/siderbar_container.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/contato.css' | relative_url }}">
+
+</head>
+<body>
+<!-- HEADER -->
+{% include header.html %}
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="container">
+    <section class="conteudo">
+        {{ content }}
+    </section>
+    
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© {{ site.time | date: "%Y" }} {{ site.author }} — Todos os direitos reservados</p>
+</footer>
+
+<script>
+    function toggleAno(ano) {
+        const listaPosts = document.getElementById(`posts-${ano}`);
+        const seta = document.getElementById(`seta-${ano}`);
+        const botao = seta.parentElement;
+
+        if (listaPosts.style.display === "block") {
+            listaPosts.style.display = "none";
+            botao.classList.remove("ativo");
+        } else {
+            listaPosts.style.display = "block";
+            botao.classList.add("ativo");
+        }
+    }
+</script>
+
+</body>
+</html>

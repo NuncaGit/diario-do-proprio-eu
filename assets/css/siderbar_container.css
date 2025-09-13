@@ -1,0 +1,20 @@
+/* Container geral das sidebars */
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+    flex: 1;
+    align-self: stretch;
+}
+
+
+/* Sidebar-follow -> fixa no layout */
+.sidebar-follow {
+    background: var(--cor-fundo-escuro);
+    padding: 16px;
+    border-radius: 1px;
+    position: static;
+}
+
+

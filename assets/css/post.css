@@ -1,0 +1,133 @@
+/* Estilos para a página de post individual */
+.conteudo-post-conteudo {
+    max-width: auto;
+    margin: 40px;
+    padding: 32px;
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-post-conteudo h1 {
+    font-size: 2.8rem;
+    margin-bottom: 8px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.post-meta-completo {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 32px;
+    display: block;
+}
+
+.post-content h2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.post-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #555;
+}   
+
+.post-content img {
+    max-width: 600px;
+    height: 300px;
+    margin: 2rem auto;
+    border-radius: 1px;
+}
+
+.post-card {
+    /* ... seus estilos existentes do post-card ... */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px; /* Adiciona um espaço entre o conteúdo do card e a linha */
+    margin-bottom: 20px; /* Adiciona um espaço entre a linha e o próximo card */
+}
+
+/* Opcional: Remove a borda do último card para evitar uma linha extra no final */
+.posts-grid .post-card:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.posts-grid {
+    color: #000000;
+    gap: 20px;
+    width: 100%;          /* ocupa toda a largura disponível */
+    margin: 0;            /* remove margens externas que centralizam */
+    padding: 20px;        /* espaço interno (opcional) */
+}
+
+.posts-grid a {
+    text-decoration: none;   /* remove o sublinhado */
+    color: inherit;          /* herda a cor do elemento pai (no caso do h3) */
+}
+
+.posts-grid a:visited {
+    color: inherit;          /* evita o roxo de link visitado */
+}
+
+.posts-grid a:hover {
+    color: var(--cor-texto-claro-hover);          /* cor opcional no hover */
+}
+
+@media (max-width: 768px) {
+    .conteudo-post-conteudo {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .conteudo-post-conteudo h1 {
+        font-size: 2rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .post-content p {
+        font-size: 1rem;
+    }
+
+    .post-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.post-card-link {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.post-card-link:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+.categoria-receita.conteudo-post-conteudo {
+    border-left: 6px solid rgba(255, 138, 101, 0.8);
+}
+
+.categoria-devlog.conteudo-post-conteudo {
+    border-left: 6px solid rgba(76, 175, 80, 0.8);
+}
+
+.categoria-juridico.conteudo-post-conteudo {
+    border-left: 6px solid rgba(156, 39, 176, 0.8);
+}
+
+.categoria-diverso.conteudo-post-conteudo {
+    border-left: 6px solid rgba(255, 193, 7, 0.8);
+}

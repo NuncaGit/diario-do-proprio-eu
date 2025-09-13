@@ -1,0 +1,101 @@
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+    background: var(--cor-fundo-escuro);
+    padding: 16px;
+    border-radius: 1px;
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.sidebar h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--cor-fundo-escuro);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+}
+
+/* ---------- Botão do ano minimalista ---------- */
+.ano-botao {
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+    transition: color 0.2s ease;
+}
+
+/* Ao passar o mouse no ano */
+.ano-botao:hover {
+    color: var(--cor-texto-escuro-hover);
+}
+
+/* Número de posts */
+.ano-contador {
+    font-weight: normal;
+    font-size: 10px;
+    color: #666;
+}
+
+/* Setinha minimalista */
+.seta {
+    margin-left: auto;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Quando o botão está ativo, gira a seta */
+.ano-botao.ativo .seta {
+    transform: rotate(180deg);
+}
+
+/* Lista dos posts inicialmente oculta */
+.posts-ano {
+    display: none;
+    margin: 6px 0 12px 10px;
+    padding-left: 12px;
+    border-left: 2px solid var(--cor-texto-escuro);
+}
+
+.posts-ano li {
+    margin-bottom: 4px;
+}
+
+.posts-ano a {
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.posts-ano a:hover {
+    color: var(--cor-texto-escuro-hover);
+}
+
+.titulo-sidebar {
+    text-align: center;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 16px;
+}
+
+/* Responsividade da sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        order: 2;
+        margin-top: 20px;
+    }
+}

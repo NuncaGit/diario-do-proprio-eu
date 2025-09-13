@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include post_destaque.html %}
+
+<main class="container_2">
+  <section class="conteudo">
+    {{ content }}
+  </section>
+
+  <aside class="sidebar-container">
+    <div class="sidebar-follow">
+      {% include sidebar_follow.html %}
+    </div>
+    <div class="sidebar">
+      {% include sidebar.html %}
+    </div>
+  </aside>
+</main>

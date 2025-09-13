@@ -1,0 +1,136 @@
+/* Container principal do header */
+.site-header {
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    text-align: center;
+    position: static;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ====== NAV SUPERIOR (nav_links) ====== */
+.site-header .top-nav {
+    padding: 10px;
+    background-color: rgb(34, 34, 34);
+    box-shadow: 0 -2px 6px rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.site-header .top-nav a {
+    color: var(--cor-texto-escuro);
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 0.85rem;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.site-header .top-nav a:hover {
+    color: var(--cor-texto-claro-hover);
+    border-bottom: 2px solid var(--cor-texto-claro-hover);
+}
+
+/* ====== TÍTULO DO SITE ====== */
+.site-header h6 {
+    font-size: 5.0rem;
+    margin: 20px 0 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Remove sublinhado e mantém cor do link do título */
+.site-header h6 a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-header h6 a:hover {
+    color: var(--cor-texto-claro-hover);
+}
+
+/* ====== NAV INFERIOR (nav_categorias) ====== */
+.site-header .bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.site-header .bottom-nav a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-bottom: 4px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Cores diferentes por categoria */
+.bottom-nav a.nav-receitas:hover {
+  color: var(--cor-receita);
+  border-bottom: 2px solid var(--cor-receita);
+}
+
+.bottom-nav a.nav-devlog:hover {
+  color: var(--cor-devlog);
+  border-bottom: 2px solid var(--cor-devlog);
+}
+
+.bottom-nav a.nav-jurídico:hover {
+  color: var(--cor-juridico);
+  border-bottom: 2px solid var(--cor-juridico);
+}
+
+.bottom-nav a.nav-diversos:hover {
+  color: var(--cor-diverso);
+  border-bottom: 2px solid var(--cor-diverso);
+}
+
+
+
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 15px 5%;
+    }
+
+    /* Ajuste do título */
+    .site-header h6 {
+        font-size: 2rem;
+    }
+
+    /* Nav superior reorganizada */
+    .site-header .top-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Nav inferior mais compacta */
+    .site-header .bottom-nav {
+        gap: 15px;
+    }
+}

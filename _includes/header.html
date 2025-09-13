@@ -1,0 +1,23 @@
+<header class="site-header">
+    <!-- Nav links no canto -->
+    <nav class="top-nav">
+        {% for link in site.nav_links %}
+            <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {% endfor %}
+    </nav>
+
+    <!-- Título centralizado -->
+    <h6 class="site-title">
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+    </h6>
+
+    <!-- Categorias na parte de baixo -->
+    <nav class="bottom-nav">
+    {% for link in site.nav_categorias %}
+        <a href="{{ link.url | relative_url }}" class="nav-{{ link.title | downcase }}">
+        {{ link.title }}
+        </a>
+    {% endfor %}
+    </nav>
+
+</header>

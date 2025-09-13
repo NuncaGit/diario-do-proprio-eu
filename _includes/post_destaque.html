@@ -1,0 +1,15 @@
+{% assign ultimo_post = site.posts | first %}
+<a href="{{ ultimo_post.url | relative_url }}" class="post-destaque-link">
+    <section class="post-destaque">
+        <div class="post-destaque-img">
+            {% if ultimo_post.image %}
+                <img src="{{ ultimo_post.image | relative_url }}" alt="{{ ultimo_post.title }}">
+            {% else %}
+                <img src="https://i0.wp.com/espaferro.com.br/wp-content/uploads/2024/06/placeholder-103.png?resize=800%2C400&ssl=1" alt="Capa do post">
+            {% endif %}
+        </div>
+        <div class="post-destaque-info">
+            <h1 class="post-destaque-titulo">{{ ultimo_post.title }}</h1>
+        </div>
+    </section>
+</a>

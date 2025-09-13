@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | {{ site.title }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/sidebar.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+</head>
+<body>
+<!-- HEADER -->
+{% include header.html %}
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="container-post">
+    <section class="conteudo-post-conteudo categoria-{{ page.categoria | downcase }}">
+        <article>
+            <h1>{{ page.title }}</h1>
+            <div class="post-content">
+                {{ content }}
+            </div>
+        </article>
+    </section>
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© {{ site.time | date: "%Y" }} {{ site.author }} — Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

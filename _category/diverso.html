@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Diversos"
+categoria: diverso
+permalink: /Diversos/
+---
+
+
+<h2>Últimos Posts</h2>
+<div class="posts-grid">
+{% assign posts_receitas = site.posts | where_exp: "post", "post.categoria contains 'diverso'" %}
+{% for post in posts_receitas %}
+<a href="{{ post.url | relative_url }}" class="post-card-link">
+  <article class="post-card categoria-{{ post.categoria | downcase }}">
+      {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      {% else %}
+          <img src="https://i0.wp.com/espaferro.com.br/wp-content/uploads/2024/06/placeholder-103.png?resize=300%2C200&ssl=1" alt="Capa do post">
+      {% endif %}
+      <div class="post-info">
+          <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+          <h3>{{ post.title }}</h3>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+  </article>
+</a>
+{% endfor %}
+</div>
+

@@ -1,0 +1,22 @@
+<div class="sidebar-conteudo">
+<h3 class="titulo-sidebar">Posts por Ano</h3>
+{% assign posts_por_ano = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+<ul class="ano-lista">
+{% for ano in posts_por_ano %}
+<li class="ano-item">
+<button class="ano-botao" onclick="toggleAno('{{ ano.name }}')">
+<span class="ano-texto">{{ ano.name }}</span>
+<span class="ano-contador">({{ ano.items | size }})</span>
+<span class="seta" id="seta-{{ ano.name }}">▼</span>
+</button>
+<ul id="posts-{{ ano.name }}" class="posts-ano">
+{% for post in ano.items %}
+<li>
+<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+</ul>
+</li>
+{% endfor %}
+</ul>
+</div>

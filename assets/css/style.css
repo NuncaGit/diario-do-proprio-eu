@@ -1,0 +1,105 @@
+/* Importa fontes e módulos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif;
+}
+h6{
+    font-family: 'Barriecito', cursive;
+}
+
+
+/* ---------- CORES GLOBAIS ---------- */
+:root {
+    /* Tema base */
+    --cor-fundo-claro: hsla(0, 0%, 0%, 0.459); /* n importa */
+    --cor-texto-claro: #222222;
+    --cor-texto-claro-hover: #54b1da;
+    --cor-texto-claro-botao: #006c9a;
+
+    --cor-fundo-escuro: #222222;
+    --cor-texto-escuro: #F5F5F5;
+    --cor-texto-escuro-hover: #54b1da;
+
+    --cor-fundo: #F5F5F5;
+    --cor-texto: #af3d3d; /* n importa */
+
+    /* Paleta por categoria */
+    --cor-receita: #FF8A65; /* Coral */
+    --cor-devlog: #4CAF50;       /* Azul vibrante */
+    --cor-juridico: #9C27B0;   /* Verde jurídico */
+    --cor-diverso: #FFC107;    /* Roxo neutro */
+
+        /* Cores de hover — tons um pouco mais escuros */
+    --cor-receita-hover: #000000;
+    --cor-devlog-hover: #000000;
+    --cor-juridico-hover: #000000;
+    --cor-diverso-hover: #000000;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-y: scroll; /* sempre reserva espaço para a barra vertical */
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    flex: 3;
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BODY GERAL ---------- */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+/* ---------- CONTAINER PRINCIPAL ---------- */
+.container {
+    width: 100%;
+    max-width: 96%;         /* limita a largura máxima */
+    min-height: 96%;         /* altura mínima do banner */
+    margin: 40px;      
+   /* margem superior/inferior + centraliza horizontalmente */
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 40px;        /* espaçamento interno */
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;   /* centraliza conteúdo horizontalmente */
+    align-items: center;       /* centraliza conteúdo verticalmente */
+    background: var(--cor-fundo);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra sutil */
+    color: var(--cor-texto-claro);               /* texto claro */
+    text-align: center;
+    border-radius: 1px;        /* opcional: bordas levemente arredondadas */
+    border-left: 6px solid var(--cor-texto-claro-hover);
+}
+
+.container_2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* centraliza conteúdo horizontalmente */
+    align-items: center;       /* centraliza conteúdo verticalmente */
+    text-align: center;       /* opcional: bordas levemente arredondadas */
+}
+
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

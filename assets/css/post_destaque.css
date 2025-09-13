@@ -1,0 +1,114 @@
+/* CONTAINER PRINCIPAL DO DESTAQUE */
+.post-destaque {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 330px; /* Altura padrão para desktop */
+    overflow: hidden;
+    background-color: #00000000;
+}
+
+/* IMAGEM DO DESTAQUE */
+.post-destaque-img {
+    margin-left: 17px;
+    position: absolute;
+    inset: 0; /* Ocupa 100% do container */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.post-destaque-img img {
+    filter: blur(15px); /* Aplica o efeito de blur */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease; /* Transição também no blur */
+}
+
+/* Ao passar o mouse, tira o blur e aumenta levemente o zoom */
+.post-destaque:hover .post-destaque-img img {
+    filter: blur(0px);
+    transform: scale(1.05);
+}
+
+/* BLOCO DE TEXTO SOBRE A IMAGEM */
+.post-destaque-info {
+    position: absolute; /* Agora permite mover livremente */
+    top: 90px;          /* Ajusta a distância do topo */
+    left: 40px;         /* Ajusta a distância da esquerda */
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: var(--cor-texto-escuro);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* TÍTULO DO POST EM DESTAQUE */
+.post-destaque-titulo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+/* RESUMO DO POST */
+.post-destaque-excerpt {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+/* BOTÃO DE LER MAIS */
+.post-destaque-btn {
+    display: inline-block;
+    background: black;
+    color: var(--cor-texto-escuro);
+    padding: 10px 22px;
+    border-radius: 1px;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.6s ease;
+}
+
+.post-destaque-btn:hover {
+    color: var(--cor-texto-escuro-hover);
+    transform: scale(1.05);
+}
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+@media (max-width: 768px) {
+    .post-destaque-info {
+        top: 10px;
+        left: 10px;
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-destaque {
+        height: 260px; /* Reduz ainda mais no mobile */
+    }
+
+    .post-destaque-info {
+        max-width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .post-destaque-titulo {
+        font-size: 1.5rem;
+    }
+
+    .post-destaque-excerpt {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,45 @@
+title: "Diário do Proprio Eu"
+description: "Minha jornada pessoal como desenvolvedor de jogos, advogado e cozinheiro."
+author: Diário do Proprio Eu
+email: tessssssssste_email@gmail.com
+baseurl: ""
+url: ""
+
+# Links de navegação
+nav_links:
+  - title: "Início"
+    url: "/"
+  - title: "Sobre"
+    url: "/about/"
+  - title: "Contato"
+    url: "/contato/"
+  
+nav_categorias:
+  - title: "Receitas"
+    url: "/Receitas/"
+  - title: "DevLog"
+    url: "/DevLog/"
+  - title: "Jurídico"
+    url: "/Juridico/"
+  - title: "Diversos"
+    url: "/Diversos/"
+
+# Permalink dos posts
+permalink: /:year/:month/:day/:title.html
+
+# Sidebar personalizada
+sidebar:
+  title: "Categorias"
+  tags:
+    - DevLog
+    - Jurídico
+    - Receitas
+    - Diversos
+
+theme: null
+plugins:
+  - jekyll-feed
+
+collections:
+  category:
+      output: true

@@ -24,7 +24,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0' # Ruby 3.0 é mais estável com Jekyll 4.x
+          ruby-version: '3.2' # Ruby 3.0 é mais estável com Jekyll 4.x
           bundler-cache: true
 
       - name: Install system dependencies
